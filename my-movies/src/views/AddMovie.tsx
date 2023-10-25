@@ -55,7 +55,7 @@ const AddMovie: React.FC<AddMovieProps> = ({
   };
 
   return (
-    <Dialog open={false}>
+    <Dialog open={open} onClose={onClose}>
       <form>
         <DialogTitle>Add a Movie</DialogTitle>
         <DialogContent>
@@ -78,12 +78,12 @@ const AddMovie: React.FC<AddMovieProps> = ({
               </Grid>
             </Grid>
             <Grid item xs={12}>
-              {/* Movie Review */}c
+              {/* Movie Review */}
             </Grid>
           </Grid>
         </DialogContent>
         <DialogActions>
-          <Button color="primary">Cancel</Button>
+          <Button color="primary" onClick={() => onClose()} >Cancel</Button>
           <Button type="submit" color="primary">
             Add
           </Button>

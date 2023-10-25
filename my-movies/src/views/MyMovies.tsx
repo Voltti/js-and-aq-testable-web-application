@@ -1,14 +1,18 @@
+import React, { useState } from "react";
 import { Typography, Container, Grid, Button } from "@mui/material";
 import { Movie } from "../components/Movie";
 import { IMovie, initialMovies } from "../utils/movies";
 import { useNavigate } from "react-router-dom";
+import AddMovie from "./AddMovie";
+
+
 
 export const MyMovies = () => {
+  const [dialogIsOpen, setdialogIsOpen] = useState(false);
   const navigate = useNavigate();
   const logout = () => {
     navigate("/");
   };
-
 
   return (
     <Container>
@@ -28,6 +32,7 @@ export const MyMovies = () => {
       <Button
         variant="outlined"
         color="primary"
+        onClick={() => setdialogIsOpen(true)}
       >
         Add Movie
       </Button>
@@ -46,6 +51,7 @@ export const MyMovies = () => {
           );
         })}
       </Grid>
+      <AddMovie open={dialogIsOpen} onClose={() => setdialogIsOpen(false)}/>
     </Container>
   );
 };

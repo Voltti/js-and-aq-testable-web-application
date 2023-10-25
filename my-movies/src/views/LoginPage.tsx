@@ -14,7 +14,7 @@ const LoginPage = () => {
 
   const handleLoginClick = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (formData.username === "Username" && formData.password === "password") {
+    if (formData.username === "pete" && formData.password === "00pete00") {
       setError("");
       navigate("/movies");
     } else {
