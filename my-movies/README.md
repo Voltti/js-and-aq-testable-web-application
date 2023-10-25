@@ -23,7 +23,7 @@
 - [Create tests](#create-tests)
 
 ## First steps
-We have implemented a fake login page. Credentials are hardcoded in `LoginPage.tsx`. You can find them and try changing them to log in.
+We have implemented a fake login page. Credentials are hardcoded in `LoginPage.tsx`. Find and change them, and then try to login.
 
 
 ## React Assignment 1: Opening AddMovie Dialog
