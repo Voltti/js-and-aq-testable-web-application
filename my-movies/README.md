@@ -168,7 +168,7 @@ Whether you created virtualenv or not, installing project python requirements ha
    ```
 
 **Running test**
-
+If you changed the username and password in the [First steps](#first-steps), you also need to update these credentials in the 'login.robot' test.
 To test that everything is working: First ensure that My movies application is running. Then run following command in
 project root folder:
    ```shell
